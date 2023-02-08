@@ -7,15 +7,57 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="Message"></div>
-    <button type="button" onclick="showMessage()">Click</button>
+    <!-- <div id="Message"></div> bt .1
+    <button type="button" onclick="showMessage()">Click</button> -->
+
+    <h1>Calculator</h1>
+    <input type="text" id="num1" placeholder="Insert first number">
+    <input type="text" id="num2" placeholder="Insert second number">
+    <div>
+        <button type="button" onclick="Add()">Addition (+)</button>
+        <button type="button" onclick="Sub()">Subtraction (-)</button>
+        <button type="button" onclick="Multi()">Multiplication (*)</button>
+        <button type="button" onclick="Divi()">Division (/)</button>
+    </div>
+    <p>Result Division: 
+        <span id="result"></span>
+    </p>
+
 
     <script>
-        function showMessage() {
-            console.log("hello world");
-            alert("hello world");
-            document.getElementById("Message").innerHTML = "hello world";
-            document.write("xin chao");
+        // function showMessage() {
+        //     console.log("hello world");
+        //     alert("hello world");
+        //     document.getElementById("Message").innerHTML = "hello world";
+        //     document.write("xin chao");
+        // } bt .1
+
+        function Add() {
+            let Num_1 = document.getElementById("num1").value;
+            let Num_2 = document.getElementById("num2").value;
+            let Result = Number(Num_1) + Number(Num_2);
+            document.getElementById("result").innerHTML = Result;
+        }
+
+        function Sub() {
+            let Num_1 = document.getElementById("num1").value;
+            let Num_2 = document.getElementById("num2").value;
+            let Result = Number(Num_1) - Number(Num_2);
+            document.getElementById("result").innerHTML = Result;
+        }
+
+        function Multi() {
+            let Num_1 = document.getElementById("num1").value;
+            let Num_2 = document.getElementById("num2").value;
+            let Result = Number(Num_1) * Number(Num_2);
+            document.getElementById("result").innerHTML = Result;
+        }
+
+        function Divi() {
+            let Num_1 = document.getElementById("num1").value;
+            let Num_2 = document.getElementById("num2").value;
+            let Result = Number(Num_1) / Number(Num_2);
+            document.getElementById("result").innerHTML = Result;
         }
     </script>
 </body>
